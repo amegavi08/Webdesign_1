@@ -1,0 +1,40 @@
+/*Responsiveness of the pages*/
+@media screen and (max-width:698px){
+    .nav-item{
+    padding-left: 10px;
+        color: crimson;
+}
+    
+    .banner-text h2{
+        font-size: 35px;
+    }
+    
+    .banner-text p{
+        font-size: 15px;
+    }
+    
+    .navbar-custom.top-nav-collapse {
+        background-color: rgba(220, 20, 60,0.7);
+	}
+    
+    .content{
+    border-radius: 0px;
+}
+    
+.contact span{
+    font-size: 35px;
+}
+
+    
+    .contact-head{
+    font-size: 40px;
+    padding: 10px 0px 15px;
+    text-transform: uppercase;
+}
+/*
+    .banner-overlay {
+	padding: 180px 0 150px;
+}
+    
+*/
+}

@@ -1,0 +1,460 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+
+body {
+    line-height:1;
+    margin: 0;
+    padding: 0;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/*My Codes*/
+/*Navigation Bar*/
+.navbar-nav{
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-item{
+    padding-left: 30px;
+}
+
+a.nav-link:hover{
+    border-bottom: 0.5px solid #fff;
+    color: crimson;
+}
+
+.navbar-custom{
+    background-color: transparent;
+}
+
+.navbar-toggler {
+  padding: 0.20rem 0.70rem;
+  font-size: 1.20rem;
+}
+
+.navbar-toggler-icon {
+  width: 1.0em;
+  height: 1.0em;    
+}
+
+.navbar-custom.top-nav-collapse {
+    background-color: rgb(208, 212, 237);
+    transition: all 0.9s ease-in-out;
+}
+
+/*Banner and banner info*/
+.banner{
+    background-attachment:fixed;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: #645862;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-overlay {
+	padding: 280px 0 220px;
+	background-color: RGBA(15, 5, 20, 0.7);
+}
+
+
+.banner-text h2{
+    font-size: 50px;
+    font-weight: none;
+}
+
+.banner-text p{
+    font-size: 18px;  
+    line-height: 30px;
+}
+
+.banner-button {
+	border: rgba(204, 204, 204, 0.18) 1px solid;
+	padding: 12px 35px;
+	color: crimson;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 25px 25px 25px 25px;
+	font-size: 16px;
+	margin-top: 25px;
+}
+
+.banner-button:hover {
+	background-color: crimson;
+	text-decoration: none;
+	color: #fff;
+}
+
+span{
+    color: rgb(220, 20, 60);
+}
+/*Blank-1*/
+.blank-1{
+    padding: 90px 0 150px;
+    background-color: rgb(177, 179, 190);
+    background-image: url(../images/test-clients-bg.png);
+}
+
+
+.content{
+    margin: 0 auto;
+    padding: 30px 0px 30px;
+    background-image: url(../images/Digistore-background-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+.content::after{
+    content: "";
+    width: 55%;
+    height: 40px;
+    border-radius: 10px 0px 10px 0px;
+    background-color: rgb(68, 71, 73);
+    position: absolute;
+    top: 10px;
+    bottom: 20px;
+    left: 7px;
+    z-index: -1
+        
+}
+
+.content h1{
+    text-align: center;
+    color: rgb(220, 20, 60);
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform:capitalize;
+
+}
+*/
+
+.content-info{
+    color: #fff;
+    margin: 0 auto;
+    padding: 20px 0 10px;
+    line-height: 30px;
+    font-size: 15px;
+    max-width: 85%;
+    text-align: center;
+    font-style: italic;
+}
+
+.image-container-1{
+    position: relative;
+    padding: 15px 0px 10px;
+    margin: 0 auto;
+    max-width: 85%;
+    border-radius: 10px 0px 10px 0px;
+    overflow: hidden;
+}
+
+.image-container-1 img{
+    margin: 0;
+    border-radius: 10px 0px 10px 0px;
+    transition: all 0.3s;
+}
+
+.image-container-1:hover img{
+    -o-transform: scale(1.21);
+    -moz-transform: scale(1.21);
+    -webkit-transform: scale(1.21);
+    transform: scale(1.21);
+}
+
+.image-container-2{
+    position: absolute;
+    top: 80px;
+    right: 48px;
+    padding: 5px 7px 20px;
+    margin: 0 auto;
+/*    border-radius: 0px 10px 0px 10px;*/
+    overflow: hidden;
+    max-width: 85%;
+}
+
+.image-container-2 img{
+    margin: 0;
+    border-radius: 0px 10px 0px 10px;
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255,0.8);
+    padding: 0px 5px 5px 0px;
+}
+
+.image-container-2:hover img{
+    -o-transform: scale(1.21);
+    -moz-transform: scale(1.21);
+    -webkit-transform: scale(1.21);
+    transform: scale(1.21);
+}
+
+
+.blank-2{
+    padding: 100px 10px 200px;
+    background-image: url(../images/footer-bg.png);
+    background-color: rgba(210, 215, 247,0.3);
+    background-attachment: fixed;
+}
+
+.topic{
+    color: rgba(37, 4, 72,0.5);
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0px 30px;
+}
+
+.media-header{
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    color: crimson;
+}
+
+.media-info{
+    font-size: 13px;
+    line-height: 25px;
+}
+
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+.card img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.content-1{
+    margin: 0 auto;
+    padding: 30px 15px 30px;
+}
+
+.contact-head{
+    font-size: 70px;
+    padding: 10px 5px 15px;
+    text-transform: uppercase;
+}
+
+.contact span{
+    font-size: 55px;
+    color: crimson; 
+}
+
+.contact{
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0 auto;
+    padding: 10px 5px 10px;
+    text-align: justify;
+}
+
+.socials{
+    margin: 0 auto;
+    padding: 10px 5px 5px;
+}
+
+.li-space-lg li {
+	margin-bottom: 0.775rem;
+    font-size: 14px;
+    color: rgb(123, 108, 154);
+}
+
+.media i{
+    color: #000;
+    font-size: 14px;
+}
+
+.content-2{
+    margin: 0 auto;
+    padding: 30px 15px 30px;
+    background-color: rgb(177, 176, 185);
+    color: #fff;
+}
+
+.contact-board{
+    padding: 20px 15px 15px;
+    display: block;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.inner-cb{
+    padding: 20px 30px 45px;
+    margin: 0 auto;
+}
+
+.inner-space{
+    padding: 20px 5px 0px;
+    width: 100%;
+}
+
+.inner-space input[type='text'],input[type='email']{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    line-height: 1.42857;
+    height: 46px;
+    border-bottom: 1px solid rgb(208, 212, 237);
+    font-size: 14px;
+}
+
+.inner-space textarea{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(208, 212, 237);
+    resize: none;
+    line-height: 1.42857;
+    font-size: 14px;
+}
+
+.inner-space input[type='submit']{
+    width: 90px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid rgb(33, 37, 41);
+    color: rgb(33, 37, 41);
+}
+
+.inner-space ul{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inner-space ul li{
+    list-style: none;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.inner-space ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.inner-space ul li a:hover{
+    color: rgb(208, 212, 237);
+    letter-spacing: 5px;
+    border-bottom: 1px solid rgb(220, 20, 60);
+    transition: 0.3s ease-out;
+}
+
+.owner{
+    text-align: center;
+    color: rgb(88, 1, 82);
+}
+
+
+
+
+
+
+
