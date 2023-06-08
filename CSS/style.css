@@ -27,11 +27,8 @@ time, mark, audio, video {
     background:transparent;
 }
 
-
 body {
     line-height:1;
-    margin: 0;
-    padding: 0;
 }
 
 article,aside,details,figcaption,figure,
@@ -104,50 +101,170 @@ input, select {
     vertical-align:middle;
 }
 
+/*My Own Codes*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
 
-/*My Codes*/
-/*Navigation Bar*/
-.navbar-nav{
-    font-size: 16px;
+/********** Template CSS **********/
+
+
+
+body{
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
     color: #fff;
+    font-size: 1rem;
 }
 
-.nav-item{
-    padding-left: 30px;
+a:hover{
+    color: orange;
 }
 
-a.nav-link:hover{
-    border-bottom: 0.5px solid #fff;
-    color: crimson;
+/* Header */
+header{
+    position: fixed;
+    right: 6;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 75px;
+    padding: 0 2rem;
+    background: #000;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.3);
+	transition: all 0.2s;
 }
 
-.navbar-custom{
-    background-color: transparent;
+.navbar{
+    max-width: 1200px;
+/*    padding: 0 2rem;*/
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar-toggler {
-  padding: 0.20rem 0.70rem;
-  font-size: 1.20rem;
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
-.navbar-toggler-icon {
-  width: 1.0em;
-  height: 1.0em;    
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
 }
 
-.navbar-custom.top-nav-collapse {
-    background-color: rgb(208, 212, 237);
-    transition: all 0.9s ease-in-out;
+.navbar .links a{
+    font-weight: 300;
 }
 
+.navbar .links a:hover{
+    /* letter-spacing: 0.1rem; */
+    color: rgb(254, 203, 36)
+}
+
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand:hover{
+    color: rgb(254, 203, 36)
+}
+
+
+.action-btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.95rem 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-btn:hover{
+    background-color: white;
+    color: orange;
+    transition: all 300ms ease-in;
+    scale: 1.0;
+}
+
+
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: fixed;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(125, 124, 122);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* SECTION */
 /*Banner and banner info*/
 .banner{
     background-attachment:fixed;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/Digistore-background.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     background-color: #645862;
+    transition: all 300ms ease-in;
+    margin: 0 auto;
+    padding: 0 0 80px 0;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -155,24 +272,34 @@ a.nav-link:hover{
 
 .banner-overlay {
 	padding: 280px 0 220px;
-	background-color: RGBA(15, 5, 20, 0.7);
+	background-color: rgba(15, 5, 20, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-
 .banner-text h2{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: none;
+    color: whitesmoke;
 }
 
 .banner-text p{
     font-size: 18px;  
     line-height: 30px;
+    font-weight: 300;
+}
+
+.banner-text span{
+    color: rgb(254, 203, 36)
 }
 
 .banner-button {
 	border: rgba(204, 204, 204, 0.18) 1px solid;
 	padding: 12px 35px;
-	color: crimson;
+    color: orange;
 	text-decoration: none;
 	display: inline-block;
 	border-radius: 25px 25px 25px 25px;
@@ -181,68 +308,57 @@ a.nav-link:hover{
 }
 
 .banner-button:hover {
-	background-color: crimson;
+	background-color: orange;
 	text-decoration: none;
 	color: #fff;
 }
 
-span{
-    color: rgb(220, 20, 60);
-}
-/*Blank-1*/
-.blank-1{
-    padding: 90px 0 150px;
-    background-color: rgb(177, 179, 190);
-    background-image: url(../images/test-clients-bg.png);
-}
-
-
-.content{
-    margin: 0 auto;
-    padding: 30px 0px 30px;
-    background-image: url(../images/Digistore-background-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
+/* Intro Space */
+.intro_space {
 /*
-.content::after{
-    content: "";
-    width: 55%;
-    height: 40px;
-    border-radius: 10px 0px 10px 0px;
-    background-color: rgb(68, 71, 73);
-    position: absolute;
-    top: 10px;
-    bottom: 20px;
-    left: 7px;
-    z-index: -1
-        
-}
-
-.content h1{
-    text-align: center;
-    color: rgb(220, 20, 60);
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: normal;
-    text-transform:capitalize;
-
-}
+    margin: 45px auto;
+    padding: 0;
+    width: 100%;
 */
-
-.content-info{
-    color: #fff;
     margin: 0 auto;
-    padding: 20px 0 10px;
-    line-height: 30px;
+    padding: 5px 0 10px;
+    line-height: 10px;
     font-size: 15px;
     max-width: 85%;
-    text-align: center;
     font-style: italic;
 }
 
+.inner-intro{
+    padding: 0 30px;
+}
+
+.intro_space .outer-intro{
+    font-size: 2.0rem;
+    padding: auto 0;
+    margin: 0 auto;
+    font-weight: 500;
+    line-height: 0.9rem;
+    text-align: center;
+}
+
+.intro_space .inner-intro h1{
+    font-size: 2.1rem;
+    font-weight: 300;
+    border-left: 1.5px solid orange;
+    padding: 0 0 10px 10px;
+    margin: 0 0 15px 5px;
+}
+
+
+.intro_space .inner-intro p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 0 0 10px;
+    text-align:justify;
+    line-height: 1.8rem;
+}
+
+/* Right side */
 .image-container-1{
     position: relative;
     padding: 15px 0px 10px;
@@ -265,196 +381,454 @@ span{
     transform: scale(1.21);
 }
 
-.image-container-2{
-    position: absolute;
-    top: 80px;
-    right: 48px;
-    padding: 5px 7px 20px;
+.tab-content p{
+    line-height: 1.6;
+}
+
+/************************/
+/*     12. Projects     */
+/************************/
+.filter {
+	padding-top: 6.5rem;
+	padding-bottom: 7rem;
+}
+
+.filter .section-title {
+	margin-bottom: 0.5rem;
+}
+
+.filter h2,
+.filter .section-title {
+	text-align: center;
+}
+
+.filter h2 {
+	margin-bottom: 3.25rem;
+}
+
+.filter .button-group {
+	text-align: center;
+}
+
+.filter .button-group a {
+	display: inline-block;
+	margin-right: 0.1875rem;
+	margin-bottom: 0.5rem;
+	margin-left: 0.1875rem;
+	padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
+	border-radius: 0.25rem;
+	background-color: #f1f4f7;
+	color: #7b7e85;
+	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.filter .button-group a:hover {
+	background-color: rgb(254, 203, 36);
+	color: #fff;
+}
+
+.filter .button-group a.button.is-checked {
+	background-color: rgb(254, 203, 36);
+	color: #fff;
+}
+
+.filter .grid {
+	margin-top: 1.25rem;
+	border-radius: 0.375rem;
+}
+
+/* Hover Animation */
+.filter .element-item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 50%;
+	background-color: #000; /* to hide 1px white margin in IE */
+}
+
+.filter .element-item img {
+	max-width: 100%;
+	margin: 0;
+	transition: all 0.3s;
+}
+
+.filter .element-item:hover img {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+/* end of hover animation */
+
+.filter .element-item .element-item-overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 1;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.filter .element-item .element-item-overlay span {
+	position: absolute;
+	z-index: 3;
+	top: 42%;
+	right: 0;
+	left: 0;
+	color: #fff;
+	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+}
+
+
+/**********************************/
+/*     13. Project Lightboxes     */
+/**********************************/
+.lightbox-basic {
+	position: relative;
+	max-width: 62.5rem;
+	margin: 2.5rem auto;
+	padding: 1.5625rem;
+	border-radius: 0.25rem;
+	background: #fff;
+	text-align: left;
+}
+
+.lightbox-basic img {
+	margin-right: auto;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	border-radius: 0.25rem;
+}
+
+.lightbox-basic .line-heading {
+	width: 3rem;
+	height: 1px;
+	margin-top: 0;
+	margin-bottom: 0.625rem;
+	margin-left: 0;
+	border: none;
+	background-color: #14bf98;
+}
+
+.lightbox-basic h6 {
+	margin-bottom: 2rem;
+}
+
+.lightbox-basic .testimonial-container {
+	margin-top: 1.75rem;
+	margin-bottom: 2.125rem;
+	padding: 1.125rem 1.5rem 1.125rem 1.5rem;
+	border-radius: 0.25rem;
+	background-color: #fbfbfb;
+}
+
+.lightbox-basic .testimonial-text {
+	margin-bottom: 0.5rem;
+}
+
+.lightbox-basic .testimonial-author {
+	margin-bottom: 0;
+}
+
+.lightbox-basic .btn-solid-reg,
+.lightbox-basic .btn-outline-reg {
+	margin-right: 0.375rem;
+	margin-bottom: 1rem;
+}
+
+.lightbox-basic a.mfp-close.as-button {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin-right: 0.5rem;
+	color: #484a46;
+	opacity: 1;
+}
+
+.lightbox-basic a.mfp-close.as-button:hover {
+	color: #f2f2f2;
+}
+
+.lightbox-basic button.mfp-close.x-button {
+	position: absolute;
+	top: -0.375rem;
+	right: -0.375rem;
+	width: 2.75rem;
+	height: 2.75rem;
+}
+
+/* Contact Us */
+
+.contact {
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: rgb(102, 117, 154);
+    transition: all 300ms ease-in;
     margin: 0 auto;
-/*    border-radius: 0px 10px 0px 10px;*/
-    overflow: hidden;
-    max-width: 85%;
-}
-
-.image-container-2 img{
-    margin: 0;
-    border-radius: 0px 10px 0px 10px;
-    transition: all 0.5s;
-    background-color: rgba(255, 255, 255,0.8);
-    padding: 0px 5px 5px 0px;
-}
-
-.image-container-2:hover img{
-    -o-transform: scale(1.21);
-    -moz-transform: scale(1.21);
-    -webkit-transform: scale(1.21);
-    transform: scale(1.21);
-}
-
-
-.blank-2{
-    padding: 100px 10px 200px;
-    background-image: url(../images/footer-bg.png);
-    background-color: rgba(210, 215, 247,0.3);
-    background-attachment: fixed;
-}
-
-.topic{
-    color: rgba(37, 4, 72,0.5);
-    font-size: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 20px 0px 30px;
-}
-
-.media-header{
-    font-size: 15px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #ccc;
-    color: crimson;
-}
-
-.media-info{
-    font-size: 13px;
-    line-height: 25px;
-}
-
-
-.card{
-    background-color: transparent;
-    border: none;
-}
-
-.card img:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.content-1{
-    margin: 0 auto;
-    padding: 30px 15px 30px;
-}
-
-.contact-head{
-    font-size: 70px;
-    padding: 10px 5px 15px;
-    text-transform: uppercase;
-}
-
-.contact span{
-    font-size: 55px;
-    color: crimson; 
-}
-
-.contact{
-    font-size: 15px;
-    line-height: 28px;
-    margin: 0 auto;
-    padding: 10px 5px 10px;
-    text-align: justify;
-}
-
-.socials{
-    margin: 0 auto;
-    padding: 10px 5px 5px;
-}
-
-.li-space-lg li {
-	margin-bottom: 0.775rem;
-    font-size: 14px;
-    color: rgb(123, 108, 154);
-}
-
-.media i{
-    color: #000;
-    font-size: 14px;
-}
-
-.content-2{
-    margin: 0 auto;
-    padding: 30px 15px 30px;
-    background-color: rgb(177, 176, 185);
-    color: #fff;
-}
-
-.contact-board{
-    padding: 20px 15px 15px;
-    display: block;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
-}
-
-.inner-cb{
-    padding: 20px 30px 45px;
-    margin: 0 auto;
-}
-
-.inner-space{
-    padding: 20px 5px 0px;
+    padding: 0 0 80px 0;
     width: 100%;
 }
 
-.inner-space input[type='text'],input[type='email']{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    line-height: 1.42857;
-    height: 46px;
-    border-bottom: 1px solid rgb(208, 212, 237);
-    font-size: 14px;
+
+.contact-form {
+  max-width:100%;
+  margin: 0 auto;
+  padding: 10px;
+/*  border: 1px solid #ddd;*/
+  border-radius: 5px;
 }
 
-.inner-space textarea{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid rgb(208, 212, 237);
-    resize: none;
-    line-height: 1.42857;
-    font-size: 14px;
+.contact-form .form-group label {
+  font-weight: bold;
 }
 
-.inner-space input[type='submit']{
-    width: 90px;
-    height: 40px;
-    padding: 10px;
+.contact-form .form-control {
+  margin-bottom: 20px;
+}
+
+.contact-form button {
+  width: 100%;
+  cursor: pointer;
+/*  display: block;*/
+  border-radius: 7px;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  transition: all 0.3s ease;
+  color: black;
+  margin: auto;
+  padding: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-form button:hover {
+  background-color: rgb(255, 165, 0);
+  color: white;
+  transition: all 300ms ease-in;
+  transform: scale(1.0);
+}
+
+.contact-form input[type="text"] ,.contact-form input[type="email"]{
+    padding: 2.7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
     border-radius: 7px;
-    border: 1px solid rgb(33, 37, 41);
-    color: rgb(33, 37, 41);
+    background-color: transparent;
+    color: white;
 }
 
-.inner-space ul{
-    margin: 0 auto;
-    text-align: center;
+.contact-form textarea{
+    border: 1px solid #ddd;
+    font-size: 1.3rem;
+    border-radius: 7px;
 }
 
-.inner-space ul li{
-    list-style: none;
-    font-size: 15px;
-    padding: 15px;
-}
-
-.inner-space ul li a{
+.contact-form label{
+    padding-bottom: 0.5rem;
     text-decoration: none;
-    color: #fff;
+    text-transform: uppercase;
+    color: white;
 }
 
-.inner-space ul li a:hover{
-    color: rgb(208, 212, 237);
-    letter-spacing: 5px;
-    border-bottom: 1px solid rgb(220, 20, 60);
-    transition: 0.3s ease-out;
+/*
+.catalog_info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+.size_chart{
+    padding: 1.5rem;
 }
 
-.owner{
+.image-container{
+    padding: 25px;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 10px 0px 10px 0px;
+    overflow: hidden;
+}
+
+.image-container img{
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px 0px 10px 0px;
+    transition: all 0.3s;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width:698px) {
+    .navbar .links,
+    .navbar .action-btn{
+        display: none;
+        font-size: 1.1rem;
+    }
+    .navbar .navbar-brand{
+        font-size: 1.5rem;
+    }
+    
+    .navbar .navbar-brand img{
+        width: 48;
+        height: 42;
+    }
+    
+    .navbar .toggle_btn{
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+    
+.intro_space {
+    margin: 0 auto;
+    padding: 0;
+    line-height: 10px;
+    font-size: 8px;
+    width: 100%;
     text-align: center;
-    color: rgb(88, 1, 82);
+    font-style: italic;
+}
+
+.inner-intro{
+    padding: 0 30px;
+}
+
+.intro_space .outer-intro{
+    font-size: 1.9rem;
+    padding: auto 0;
+    font-weight: bold;
+    line-height: 0.9rem;
+    text-align: center;
+}
+
+.intro_space .inner-intro h1{
+    font-size: 1.3rem;
+    border-left: 1.5px solid orange;
+    padding: 0 0 10px 10px;
+    margin: 0 0 15px 5px;
 }
 
 
+.intro_space .inner-intro p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 10px 0 0 10px;
+    line-height: 1.8rem;
+}  
+    
+        .banner-text h2{
+        font-size: 25px;
+    }
+    
+    .banner-text p{
+        font-size: 15px;
+    }
+    
+    .contact-form input[type="text"] ,.contact-form input[type="email"]{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background-color: transparent;
+}
+    
+    .contact-form label{
+        font-size: 0.65rem;
+}
+    
+.contact-form button {
+    font-size: 0.85rem;
+}
 
+}
 
+@media (min-width: 768px) {
+    	/* Projects */
+	.filter .element-item {
+		width: 25%;
+	}
 
+	.filter .element-item .element-item-overlay {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
 
+	.filter .element-item:hover .element-item-overlay {
+		opacity: 1;
+	}
+    
+    .contact-form input[type="text"] ,.contact-form input[type="email"]{
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+    
+    .contact-form label{
+    font-size: 1.0rem;
+}
 
+    .contact-form button {
+    font-size: 0.85rem;
+}
+    
+}
+
+@media (min-width: 992px){
+    
+	/* Project Lightboxes */
+	.lightbox-basic img {
+		margin-bottom: 0;
+	}
+
+	.lightbox-basic h3 {
+		margin-top: 0.375rem;
+	}
+
+	.lightbox-basic .btn-solid-reg,
+	.lightbox-basic .btn-outline-reg {
+		margin-bottom: 0;
+	}
+	/* end of project lightboxes */
+
+}
+
+@media (min-width: 1200x){
+    	/* Projects */
+	.filter .element-item {
+		width: 17.3125rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 16.875rem;
+	}
+
+	.filter .element-item .element-item-overlay span {
+		top: 45%;
+	}
+	/* end of projects */
+}
